@@ -1,0 +1,218 @@
+/* 아래에 코드를 작성하시오. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+a:active {
+  color: #000;
+  text-decoration: none;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 1rem;
+  font-weight: bold;
+}
+
+section {
+  width: 90%;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.main-image-wrapper {
+  width: 100%;
+  margin: auto;
+}
+
+.main-image {
+  max-width: 100%;
+  height: 520px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center; /* Center the image within the element */
+}
+
+.products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin-top: 50px;
+  min-height: 45vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 50px;
+  column-gap: 20px;
+  row-gap: 20px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.products-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 290px;
+  border: 1px solid rgb(238, 235, 235);
+  border-radius: 5px;
+}
+
+.product-image {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  height: 50px;
+  display: flex;
+  margin-top: 50px;
+}
+
+.sns-container {
+  margin-right: 20px;
+}
+
+.sns-container:last-child {
+  margin-right: 0;
+}
+
+.sns-image {
+  width: 20px;
+}
+
+.zoom-button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modalBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #fff;
+  width: 600px;
+  height: 500px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.modalBox button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+}
+
+.modal-image {
+  width: 400px;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-image {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .main-image {
+    height: 400px;
+  }
+  .nav-item {
+    margin-right: 1rem;
+  }
+  .modalBox {
+    width: 80%;
+    height: 70vw;
+  }
+  .modal-image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .modal-image {
+    width: 70%;
+  }
+}
